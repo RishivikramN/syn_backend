@@ -3,6 +3,16 @@ const Joi = require('@hapi/joi');
 const jwt = require("jsonwebtoken");
 const config = require("../config/default.json");
 
+const gameDetailSchema = new mongoose.Schema({
+    score:{
+        type: Number,
+        minlength: 0,
+    },
+    date:{
+        type:Date
+    },
+});
+
 const userSchema = new mongoose.Schema({
     userName:{
         type: String,
@@ -21,7 +31,8 @@ const userSchema = new mongoose.Schema({
         minlength:3,
         maxlength:100,
         required:true
-    }
+    },
+    gameDetails : [gameDetailSchema]
 });
 
 

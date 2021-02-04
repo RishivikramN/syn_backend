@@ -50,9 +50,12 @@ router.post('/signinuser',async (req,res)=>{
 
         const { error } = validateUser(req.body);
 
-        if (error) return res.status(400).send(error.details[0].message);
+        if (error){ 
+            console.log("Error in user creation");
+            return res.status(400).send(error.details[0].message);
+        }
 
-        const user = await User.findOne({ EmailID: req.body.EmailID });
+        const user = await User.findOne({ emailId: req.body.emailId });
         if (!user) return res.status(400).send("Invalid Email Id or Password");
 
         const validPassword = await bcrypt.compare(
