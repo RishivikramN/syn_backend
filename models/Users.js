@@ -9,7 +9,7 @@ const gameDetailSchema = new mongoose.Schema({
         minlength: 0,
     },
     date:{
-        type:Date
+        type:String
     },
 });
 
