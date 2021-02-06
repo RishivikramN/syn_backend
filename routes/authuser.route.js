@@ -30,7 +30,6 @@ router.post("/registeruser",async (req,res)=>{
         });
 
         const result = await user.save();
-        console.log("User Created Successfully");
 
         const response = {
             userName: result.userName,
@@ -55,7 +54,6 @@ router.post('/signinuser',async (req,res)=>{
         const { error } = validateUser(req.body);
 
         if (error){ 
-            console.log("Error in user creation");
             return res.status(400).send(error.details[0].message);
         }
 
