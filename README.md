@@ -1,4 +1,4 @@
-# syn_backend
+# SYN_Backend
 
 # API Documentation
 
