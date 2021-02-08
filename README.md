@@ -6,7 +6,7 @@
 ### End points
 | User Auth |   URL |
 |-----------|--------|
-| Sign Up | {host}/api//registeruser|
+| Sign Up | {host}/api/registeruser|
 | Sign In | {host}/api/signinuser|
 
 ### Access Level for Entities
